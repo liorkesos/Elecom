@@ -1,0 +1,13 @@
+diff --git a/modules/image/image.field.inc b/modules/image/image.field.inc
+index 07cc1e0..fe9b91d 100644
+--- a/modules/image/image.field.inc
++++ b/modules/image/image.field.inc
+@@ -545,7 +545,7 @@ function theme_image_formatter($variables) {
+     $output = theme('image', $image);
+   }
+ 
+-  if ($variables['path']) {
++  if (!empty($variables['path']['path'])) {
+     $path = $variables['path']['path'];
+     $options = $variables['path']['options'];
+     // When displaying an image inside a link, the html option must be TRUE.
