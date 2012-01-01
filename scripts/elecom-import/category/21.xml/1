@@ -1,0 +1,61 @@
+#!/usr/bin/python
+file = '21.xml'
+import urllib2
+import codecs
+import xml.dom.minidom
+document = open(file).read()
+
+dom = xml.dom.minidom.parseString(document)
+
+def getText(nodelist):
+  rc = []
+  for node in nodelist:
+    if node.nodeType == node.TEXT_NODE:
+      rc.append(node.data)
+  return ''.join(rc)
+
+def handleProductshow(productshow):
+  print 'productname,price,color,warrenty,details'
+  products = productshow.getElementsByTagName("PRODUCTS")
+  handleProducts(products)
+
+def handleProducts(products):
+  for product in products:
+    handleProduct(product)
+
+def handleProduct(product):
+  print 'processing' + str(product)
+  handleCSV(product.getElementsByTagName("PRODUCT_URL")[0])
+  handleCSV(product.getElementsByTagName("PRODUCT_IMAGE")[0])
+  handleCSV(product.getElementsByTagName("PRODUCT_PRICE")[0])
+#  handlePoints(product.getElementsByTagName("point"))
+
+def handleCSV(item):
+  print item
+  if item.childNodes:
+    print "%s" % getText(item.childNodes)
+  else:    
+    print "%s" % getText(item)
+
+def handleProductshowTitle(title):
+  print "<title>%s</title>" % getText(title.childNodes)
+
+def handleProductURL(url):
+  print "<h2>%s</h2>" % getText(url.childNodes)
+
+def handlePoints(points):
+  print "<ul>"
+  for point in points:
+    handlePoint(point)
+  print "</ul>"
+
+def handlePoint(point):
+  print "<li>%s</li>" % getText(point.childNodes)
+
+def handleToc(products):
+  for product in products:
+    title = product.getElementsByTagName("title")[0]
+  print "<p>%s</p>" % getText(title.childNodes)
+
+handleProductshow(dom)
+
