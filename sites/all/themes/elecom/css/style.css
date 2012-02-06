@@ -1655,3 +1655,78 @@ div.admin-panel .description {
   background-color: #ddd;
 }
 .field-name-field-image {float:left;}
+#admin-menu-wrapper { overflow: visible; }
+
+#block-system-main-menu li.expanded,
+#block-system-main-menu li.collapsed{
+background: url(../images/ha-header-active.jpg) no-repeat;
+font-size:1.2em;
+  width:168px;
+  padding:5px;
+}
+
+#block-system-main-menu li.expanded .first{margin-top:10px;} 
+#block-system-main-menu li.leaf{
+/*  background: url(../images/ha-header.jpg) no-repeat;
+*/
+  width:168px;
+  height:30px;
+  list-style:none;
+}
+#block-system-main-menu li.expanded a{
+  padding-right:5%;
+
+}
+#block-system-main-menu li.dhtml-menu-open > a{ 
+color:white;
+}
+
+Matched CSS Rules
+a:link, a:visited {
+  text-decoration: none;
+}
+a:link, a:visited {
+  text-decoration: none;
+}
+#block-system-main-menu ul li a {
+  color: #fff;
+}
+#block-system-main-menu ul li.leaf a {
+  color:#0070B3;
+}
+
+ul li.collapsed {
+  list-style-image:none;
+  list-style-type: none;
+}
+
+ul li.expanded {
+  list-style-image:none;
+  list-style-type: none;
+}
+
+li.expanded, li.collapsed, li.leaf {
+  padding:0;
+}
+li.dhtml-menu-open > a {
+font-weight:bold;
+}
+
+.views-field-commerce-price{
+float:left;
+background-color: #111;
+margin:5px;
+opacity:0.8;
+}
+
+.views-view-grid td{
+-moz-box-shadow: 10px 10px 5px #888;
+-webkit-box-shadow: 10px 10px 5px #888;
+box-shadow: 1px 0px 5px 1px #888;
+}
+
+.region-sidebar-first{
+-moz-box-shadow: 10px 10px 5px #888;
+-webkit-box-shadow: 10px 10px 5px #888;
+box-shadow: 1px 0px 5px 1px #888;
+margin-top:10px;}

@@ -31,7 +31,7 @@ ul.tips {
 }
 .block ol,
 .block ul {
-  padding: 0 1em 0.25em 0;
+  padding: 0; 
 }
 
 /* ------------------ Header ------------------ */
@@ -370,7 +370,6 @@ ul.nice-menu li ul li a:hover {
   background-image: url('../images/menu_bg.gif') no-repeat;
   color: #fff;
   font-size: 16px;
-  width:218px;
   height:40px;
   overflow:hidden;
   }
@@ -378,14 +377,18 @@ ul.nice-menu li ul li a:hover {
 .view-featured .views-field-title a {
 	color:#fff;
 }
+.view-featured .views-field-title a:hover {
+  text-decoration:underline;
+}
+
 .views-view-grid td{
   width:220px !important;
   padding:0px;
 }
 
-.view-featured .view-field-field-image {
+.view-featured .views-field-field-image {
   text-align:center;
-  border:1px solid black;
+  margin:0 30px;
 }
 
 
@@ -396,6 +399,4 @@ float: left;
 color: white;
 background: #202020;
 padding: 6px;
-position: relative;
-top:50px;
 }
