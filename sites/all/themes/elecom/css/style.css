@@ -199,7 +199,7 @@ tr td,
 tr th {
   padding: 4px 9px;
   border: 1px solid #fff;
-  text-align: left; /* LTR */
+  text-align: right; /* LTR */
 }
 #footer-wrapper tr td,
 #footer-wrapper tr th {
@@ -1730,3 +1730,9 @@ box-shadow: 1px 0px 5px 1px #888;
 -webkit-box-shadow: 10px 10px 5px #888;
 box-shadow: 1px 0px 5px 1px #888;
 margin-top:10px;}
+.form-item-customer-profile-billing-commerce-customer-address-und-0-name-line {float:right;}
+
+.addressfield-container-inline > div.form-item{float:right;margin-right:0em}
+.addressfield-container-inline 
+.form-item-customer-profile-billing-commerce-customer-address-und-0-locality{
+margin-right:10px !important;}
